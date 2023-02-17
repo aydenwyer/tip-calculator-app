@@ -86,6 +86,7 @@ function resetAll() {
     resetButton.addEventListener('click', () => {
         billInput.value = "";
         personCount.value = 1;
+        customTip.value = "";
         billValue = 0;
         tipAmount = 0;
         personValue = 1;
