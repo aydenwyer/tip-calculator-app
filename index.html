@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section>
+    <img src="./images/logo.svg" alt="" class="logo">
+    <main>
+      <form action="" class="tip-form">
+        <fieldset>
+          <label for="bill">Bill</label>
+          <input type="number" min="0" name="bill" id="billInput" placeholder="0" value="">
+        </fieldset>
+        <fieldset class="tip-form__select-tip">
+          <label for="tip">Select Tip %</label>
+          <div id="selectTip" class="tip-button" value=".05">5%</div>
+          <div id="selectTip" class="tip-button" value=".10">10%</div>
+          <div id="selectTip" class="tip-button" value=".15">15%</div>
+          <div id="selectTip" class="tip-button" value=".25">25%</div>
+          <div id="selectTip" class="tip-button" value=".50">50%</div>
+          <input type="text" id="enterTip" class="tip-input" name="tip" placeholder="Custom">
+        </fieldset>
+        <fieldset>
+          <div class="error-label">
+            <label for="people">Number of People</label>
+            <p id="errorMessage">Can't be zero</p>
+          </div>
+          <input type="number" min="0" name="people" id="personCount" value="1" placeholder="1">
+        </fieldset>
+      </form>
+      <section class="bill-roundup">
+        <div class="bill-roundup__section">
+          <div
+            <p class="bill-roundup__label">Tip Amount</p>
+            <p class="bill-roundup__sublabel">/ person</p>
+          </div>
+          <p class="bill-roundup__price" id="totalTipAmount">$0.00</p>
+        </div>
+        <div class="bill-roundup__section">
+          <div
+            <p class="bill-roundup__label">Total</p>
+            <p class="bill-roundup__sublabel">/ person</p>
+          </div>
+          <p class="bill-roundup__price" id="totalAmountPerPerson">$0.00</p>
+        </div>
+        <button id="clearAll" class="disabled">RESET</button>
+      </section>
+    </main> 
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
